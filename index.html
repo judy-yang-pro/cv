@@ -1,3 +1,23 @@
+太棒了！看到左右對齊成功，這份履歷的專業感就出來了。
+
+關於您的兩個問題，說明如下：
+
+1. 以後每次都要按 Ctrl + F5 嗎？
+不需要。
+這只是因為您現在頻繁地在修改程式碼，您的瀏覽器為了節省流量，會優先讀取電腦裡舊的「緩存（Cache）」。
+
+對面試官來說： 他們第一次打開您的網頁時，瀏覽器沒有舊記憶，所以直接就能看到最新、最正確的版本，不需要按任何鍵。
+
+對您來說： 等這兩天修改完成、網頁穩定後，您之後直接點開也會是正確的，不用再按 Ctrl + F5。
+
+2. 刪除 Skill 的百分比條
+這是一個非常專業的考量。在 PJM 的面試中，確實容易被問到「95% 的定義是什麼？」，移除百分比條改用打勾圖示 (Checkmark) 會顯得更有自信且專業。
+
+🛠️ 修正版程式碼（已刪除百分比、保留對齊）：
+請全選並覆蓋 index.html：
+
+HTML
+
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -12,14 +32,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 .w3-teal, .w3-hover-teal:hover {color:#fff!important; background-color:#00897B!important}
 .w3-text-teal, .w3-hover-text-teal:hover {color:#00897B!important}
 
-/* 核心修復：使用 Grid 佈局確保等高 */
 .main-grid {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* 左 1 右 2 的比例 */
+    grid-template-columns: 1fr 2fr;
     gap: 16px;
 }
 
-/* 讓左側白色卡片填滿整個格子高度 */
 .sidebar-card {
     background: white;
     height: 100%; 
@@ -38,11 +56,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 .card-shadow { box-shadow: 0 4px 10px 0 rgba(0,0,0,0.1); border-radius: 8px; }
 .section-title { border-bottom: 2px solid #00897B; padding-bottom: 8px; margin-bottom: 20px; font-weight: bold; }
 
-/* 針對手機版的自動調整 */
+/* 技能清單樣式優化 */
+.skill-item { margin-bottom: 12px; display: flex; align-items: center; }
+.skill-item i { margin-right: 10px; color: #00897B; }
+
 @media (max-width: 992px) {
-    .main-grid {
-        grid-template-columns: 1fr;
-    }
+    .main-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -64,22 +83,24 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>j135742018@gmail.com</p>
         <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+886 958 *** ***</p>
         <hr>
-        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
-        <p>International Trade (Incoterms)</p>
-        <div class="w3-light-grey w3-round-xlarge w3-small"><div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div></div>
-        <p>Project Management & Negotiation</p>
-        <div class="w3-light-grey w3-round-xlarge w3-small"><div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div></div>
-        <p>Account & Supply Chain Mgmt</p>
-        <div class="w3-light-grey w3-round-xlarge w3-small"><div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">85%</div></div>
+        
+        <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Professional Skills</b></p>
+        <div class="skill-item"><i class="fa fa-check-circle"></i> International Trade (Incoterms)</div>
+        <div class="skill-item"><i class="fa fa-check-circle"></i> Project Management & Negotiation</div>
+        <div class="skill-item"><i class="fa fa-check-circle"></i> Account & Supply Chain Mgmt</div>
+        <div class="skill-item"><i class="fa fa-check-circle"></i> Cross-functional Leadership</div>
+        <div class="skill-item"><i class="fa fa-check-circle"></i> ECN/PCN Process Management</div>
         <br>
+
         <p class="w3-large"><b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Certificates</b></p>
         <p>Python and AI Practical Applications</p>
         <p>PMP Certified (2014-2023)</p>
         <p>TOEIC Listening & Reading: 750</p>
         <br>
+
         <p class="w3-large"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
         <p>English (Fluent)</p>
-        <div class="w3-light-grey w3-round-xlarge"><div class="w3-round-xlarge w3-teal" style="height:20px;width:90%"></div></div>
+        <p>Mandarin (Native)</p>
       </div>
     </div>
 
@@ -122,7 +143,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
       </div>
     </div>
     
-  </div> </div>
+  </div>
+</div>
 
 <footer class="w3-container w3-teal w3-center w3-margin-top w3-padding-16">
   <p>© 2026 Judy Yang. Senior Project Manager.</p>
