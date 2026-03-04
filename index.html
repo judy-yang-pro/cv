@@ -12,7 +12,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 .w3-teal, .w3-hover-teal:hover {color:#fff!important; background-color:#00897B!important}
 .w3-text-teal, .w3-hover-text-teal:hover {color:#00897B!important}
 
-/* 確保左右對齊的 Grid 佈局 */
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 2.2fr;
@@ -39,6 +38,16 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 .skill-item { margin-bottom: 12px; display: flex; align-items: center; }
 .skill-item i { margin-right: 10px; color: #00897B; }
+
+.quote-box {
+    background-color: #f1f8f7;
+    border-left: 4px solid #00897B;
+    padding: 12px;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #444;
+}
 
 @media (max-width: 992px) {
     .main-grid { grid-template-columns: 1fr; }
@@ -75,16 +84,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <p class="w3-large"><b><i class="fa fa-certificate fa-fw w3-margin-right w3-text-teal"></i>Certificates & Training</b></p>
         <p><b>Python and AI Practical Applications</b><br>
         <span class="w3-small w3-text-teal">WDA (勞動部職訓局) | 2026.01.02 - 03.17</span></p>
-        
         <p><b>PMP Certified</b> (2014-2023)</p>
-        
-        <p><b>TOEIC: 750</b><br>
-        <span class="w3-small w3-text-teal">Date: 2025.12</span></p>
+        <p><b>TOEIC: 750</b><br><span class="w3-small w3-text-teal">Date: 2025.12</span></p>
         <br>
 
         <p class="w3-large"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-        <p>English (Fluent)</p>
-        <p>Mandarin (Native)</p>
+        <p>English (Fluent) / Mandarin (Native)</p>
       </div>
     </div>
 
@@ -93,12 +98,14 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <h2 class="w3-text-grey w3-padding-16 section-title"><i class="fa fa-user fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Professional Summary</h2>
         <div class="w3-container">
           <p>Result-driven project coordination professional with over 15 years of experience in the electronics industry. Expert in cross-departmental collaboration and ECN approval negotiations to ensure project success and long-term profitability.</p>
+          <p class="w3-margin-bottom">
+            <button class="w3-button w3-teal w3-round w3-small w3-disabled"><i class="fa fa-file-pdf-o w3-margin-right"></i>Detailed Portfolio (Coming Soon)</button>
+          </p>
         </div>
       </div>
 
       <div class="w3-container w3-card w3-white card-shadow" style="flex-grow: 1;">
         <h2 class="w3-text-grey w3-padding-16 section-title"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
-        
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Project Manager / LECC Technology Co., Ltd.</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2021 - July 2025</h6>
@@ -110,7 +117,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           </ul>
           <hr>
         </div>
-
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Project Manager / TPV Technology Limited</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2007 - July 2021</h6>
@@ -129,6 +135,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
           <h5 class="w3-opacity"><b>輔仁大學 (Fu Jen Catholic University)</b></h5>
           <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2022 - 2026 (Expected)</h6>
           <p>英文系培力專班 (Post-Baccalaureate Program in English) - <span class="w3-tag w3-teal w3-round">Coursework Completed</span></p>
+          <div class="quote-box">
+            "Bridging the gap between technical expertise and global communication... completing this program is about enhancing my ability to lead international projects with precision."
+          </div>
           <hr>
         </div>
         <div class="w3-container">
@@ -138,7 +147,6 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
     </div>
-    
   </div>
 </div>
 
